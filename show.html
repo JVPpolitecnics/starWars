@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <div id="itemById">
+        </div>
+    </div>
+    <div class="col-4"></div>
+   </div> 
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        // Get the query string part of the URL
+const queryString = window.location.search;
+
+// Create a URLSearchParams object with the query string
+const urlParams = new URLSearchParams(queryString);
+const id = urlParams.get('id');
+const type = urlParams.get('type');
+
+function getType(){
+    return type;
+}
+function getId(){
+    return id;
+}
+    </script>
+      <style>
+        body {
+          background-image: url('public/4aa99b6ad2d2cbc7cb04a41571885a8f.jpg');
+          background-size: cover; /* This will make the image cover the entire body */
+          background-repeat: no-repeat; /* This will prevent the image from repeating */
+          background-position: center; /* This will center the image */
+        }
+      </style>
+</body>
+</html>
